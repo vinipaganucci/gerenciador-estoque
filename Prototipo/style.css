@@ -1,85 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciador de Estoque</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="cor_header">
-        <h1>Gerenciador de Estoque</h1>
-    </header>
-    <section>
-        <div id="wrapper">
-        <h1>Tabela de Produtos</h1>
-        
-        <table id="keywords" cellspacing="0" cellpadding="0">
-          <thead>
-            <tr>
-              <th><span>Produto</span></th>
-              <th><span>Quantidade</span></th>
-              <th><span>Valor</span></th>
-              <th><span>Código</span></th>
-              
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="lalign">Maçã</td>
-              <td>500</td>
-              <td>0.50</td>
-              <td>1</td>
-              
-            </tr>
-            <tr>
-              <td class="lalign"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              
-            </tr>
-            <tr>
-              <td class="lalign"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              
-            </tr>
-            <tr>
-              <td class="lalign"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              
-            </tr>
-            <tr>
-              <td class="lalign"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              
-            </tr>
-            <tr>
-              <td class="lalign"></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              
-            </tr>
-          </tbody>
-        </table>
-        <button onclick="Adicionar()">Adicionar</button>
-        <button onclick="Excluir()">Excluir</button>
-       </div>     
-    </section>
-    <footer>
-
-    </footer>
-    <style>
-    .cor_header {
+.cor_header {
     background-color: rgb(190, 183, 183);
     padding: 50px;
 }
@@ -208,20 +127,17 @@ h1 {
 }
 
 button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px
-  }
-  
-  button:hover {
-  background-color: green;
-  
-  }
-    </style>
-</body>
-</html>
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+
+button:hover {
+  background-color: #408342;
+  transition: 0.5s;
+}

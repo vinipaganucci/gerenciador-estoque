@@ -8,16 +8,16 @@
    </head>
 <body>
     <h1>Formulário</h1>
-    <form class="container">
+    <form class="container" action="/insert" method="POST" modelAttribute="produtos">
         <h2>Produto</h2>
-        <input type="text">
+        <input type="text"  name="produto">
         <h2>Quantidade</h2>
-        <input type="text">
+        <input type="text" name="quantidade">
         <h2>Valor</h2>
-        <input type="text">
-        <button onclick="cadastrar()">Cadastrar</button>
+        <input type="text" name="valor">
+        <button type="submit">Cadastrar</button>
     </form>
-    <style>
+   	<style>
     body {
 	    background: #eee url('https://i.imgur.com/eeQeRmk.png');
 	    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -51,4 +51,9 @@ button:hover {
 }
     </style>
 </body>
+<script>
+	function cadastrar() {
+	    window.location.href = "home.html";
+	}
+</script>
 </html>

@@ -8,7 +8,7 @@
    </head>
 <body>
     <h1>Formulário</h1>
-    <form class="container" action="/insert" method="POST" modelAttribute="produtos">
+    <form class="container" action="/insert" th:action="@{/add}" method="POST" modelAttribute="produtos" th:object="${produtos}">
         <h2>Produto</h2>
         <input type="text"  name="produto">
         <h2>Quantidade</h2>
@@ -55,5 +55,6 @@ button:hover {
 	function cadastrar() {
 	    window.location.href = "home.html";
 	}
+	
 </script>
 </html>

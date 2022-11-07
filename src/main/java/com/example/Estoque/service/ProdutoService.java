@@ -17,7 +17,7 @@ public interface ProdutoService {
 
     void updateProdutoById(Integer id, Produtos aluno);
 
-    void updateProduto(Produtos aluno);
+    void updateProduto(Produtos produto);
 
-    void insertProduto(Produtos aluno);
+    void insertProduto(Produtos produto);
 }

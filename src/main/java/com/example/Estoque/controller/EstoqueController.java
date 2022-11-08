@@ -15,6 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.Estoque.model.Produtos;
 import com.example.Estoque.model.repository.EstoqueRepository;
 
+
+
+
+
 @Controller
 public class EstoqueController {
 	@Autowired
@@ -34,6 +38,28 @@ public class EstoqueController {
 
         estoqueRepository.save(produto);
 
+        return "redirect:/home";
+    }
+	
+	@GetMapping("form/{id}")
+    public String updateForm(Model model, @PathVariable(name = "id") int id) {
+
+        Produtos produto = estoqueRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+       
+        model.addAttribute("produtos", produto);
+        return "editaForm";
+    }
+	
+	
+    @PostMapping("update/{id}")
+    public String alterarProduto(@Valid Produtos produto, BindingResult result, @PathVariable int id) {
+
+        if (result.hasErrors()) {
+            return "redirect:/form";
+        }
+        
+        estoqueRepository.save(produto);
         return "redirect:/home";
     }
 	

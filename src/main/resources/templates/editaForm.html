@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+   </head>
+<body>
+    <h1>Editar Formulário</h1>
+    <form class="container" action="/home" th:action="@{/update/{id}(id=${produtos.id})}" method="POST" th:object="${produtos}">
+        <h2>Produto</h2>
+        <input type="text"  name="produto" th:field="${produtos.produto}">
+        <h2>Quantidade</h2>
+        <input type="text" name="quantidade" th:field="${produtos.quantidade}">
+        <h2>Valor</h2>
+        <input type="text" name="valor" th:field="${produtos.valor}">
+        <button type="submit" onclick="cadastrar()">Atualizar</button>
+        
+    </form>
+   	<style>
+    body {
+	    background: #eee url('https://i.imgur.com/eeQeRmk.png');
+	    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+	.container {
+	    display: flex;
+	    flex-direction: column;
+	}
+
+	input {
+   	width: 500px;
+	}
+
+	button {
+	    margin-top: 25px;
+	    width: 250px;
+	    background-color: #4CAF50; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px
+	}
+
+button:hover {
+    background-color: #408342;
+    transition: 0.5s;
+}
+    </style>
+</body>
+<script>
+	function cadastrar() {
+	    window.location.href = "home.html";
+	}
+	
+</script>
+</html>
